@@ -1,11 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Passion+One&family=Teko:wght@300&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;1,300&family=Oswald:wght@200;300;400;500&display=swap");
 :root {
   --text: #050505;
-  --header: #f8f412;
-  --background: #faffd8;
-  --hoover: #ea2b1f;
-  --other: #669bbc;
+  --main: #f5f5f5;
+  --header: #fffdfd;
+
+  --hoover: #e91745;
 }
 
 * {
@@ -19,58 +18,147 @@
 header {
   display: flex;
   width: 100%;
-  background: var(--background);
+  background: var(--header);
   justify-content: space-between;
   align-items: center;
-  height: 65px;
+  height: 80px;
   padding: 0px 20px;
+  position: fixed;
+  box-shadow: 0 4px 7px -5px #777;
 }
 
-.icon {
-  height: 60px;
-  display: flex;
-}
-.icono-contenedor {
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.icono {
-  height: 63%;
+.logo {
+  height: 50%;
 }
 
+.icono-skate {
+  height: 30px;
+  cursor: pointer;
+}
+.navbar,
 .navbar-list {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+}
+.navbar {
+  gap: 30px;
+}
+.navbar-list {
   gap: 15px;
 }
 
 .navbar-list a {
   color: var(--text);
-  font-family: "Teko", sans-serif;
-  font-size: 25px;
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
+
 .navbar-list a:hover {
   color: var(--hoover);
+
   transition: 0.4s;
 }
 
-.construccion {
+.skater {
+  width: 550px;
+  border-radius: 2px;
+}
+main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 500px;
   flex-direction: column;
+  width: 100%;
+  color: var(--text);
+  background-color: var(--main);
+}
+
+#portada {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 1200px;
+  margin-top: 80px;
+  padding: 90px 0px;
+}
+
+.info {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  width: 50%;
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+}
+.info p {
+  width: 80%;
+  text-align: justify;
+  font-family: "Chivo", sans-serif;
+}
+
+.botones {
+  display: flex;
   gap: 50px;
 }
 
-.la-baranda-shop {
-  height: 20%;
+.botones a {
+  color: var(--main);
+
+  background-color: var(--hoover);
+
+  width: 120px;
+  padding: 10px;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.5px;
+  border-radius: 3px;
 }
 
-h2 {
-  font-family: "Teko", sans-serif;
-  font-size: 2rem;
+.botones a:hover {
+  background-color: var(--text);
+  color: var(--header);
+  font-weight: 500;
+  border-radius: 3px;
+}
+
+#baranda-second-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1200px;
+  padding: 0px 50px;
+  margin-top: 55px;
+}
+
+.info-dos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.info-dos p {
+  text-align: center;
+  border: 1.5px solid var(--text);
+  border-radius: 2px;
+  font-family: "Chivo", sans-serif;
+  width: 80%;
+  padding-top: 10px;
+}
+
+h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  letter-spacing: 0.5px;
+  font-weight: 500;
 }
