@@ -5,6 +5,7 @@
   --header: #fffdfd;
 
   --hoover: #e91745;
+  --cards: #cdd0c8;
 }
 
 * {
@@ -88,6 +89,7 @@ main {
 
 .info {
   display: flex;
+
   gap: 30px;
   flex-direction: column;
   width: 50%;
@@ -97,6 +99,7 @@ h1 {
   font-family: "Oswald", sans-serif;
   font-weight: 500;
   font-size: 40px;
+  letter-spacing: 0.5px;
 }
 .info p {
   width: 80%;
@@ -135,7 +138,7 @@ h1 {
   justify-content: center;
   flex-direction: column;
   max-width: 1200px;
-  padding: 0px 50px;
+  padding: 50px 0px;
   margin-top: 55px;
 }
 
@@ -144,7 +147,7 @@ h1 {
   flex-direction: column;
   align-items: center;
 
-  gap: 20px;
+  gap: 70px;
 }
 
 .info-dos p {
@@ -153,7 +156,7 @@ h1 {
   border-radius: 2px;
   font-family: "Chivo", sans-serif;
   width: 80%;
-  padding-top: 10px;
+  padding: 20px;
 }
 
 h3 {
@@ -161,4 +164,291 @@ h3 {
   font-size: 30px;
   letter-spacing: 0.5px;
   font-weight: 500;
+}
+
+#cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1200px;
+  padding: 50px 0px;
+  margin-top: 55px;
+  gap: 70px;
+  width: 100%;
+}
+
+.cards img {
+  height: 40px;
+}
+
+.cards-contenedor {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.cards {
+  width: 300px;
+  height: 250px;
+  background-color: var(--cards);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 3px;
+}
+
+.cards-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 5px;
+  gap: 10px;
+  text-align: center;
+}
+
+.cards-info h3 {
+  font-size: 20px;
+}
+
+.cards-info p {
+  font-family: "Chivo", sans-serif;
+}
+
+.icon-contact {
+  height: 30px;
+}
+
+.skater-2 {
+  width: 550px;
+  border-radius: 2px;
+}
+
+#contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  padding: 50px 0px;
+  margin-top: 55px;
+  gap: 50px;
+}
+
+.contenedor-contacto {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 40px;
+}
+
+.contact {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.contact p {
+  font-family: "Chivo", sans-serif;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+  background-color: var(--main);
+  padding: 50px 0px;
+}
+
+footer a {
+  font-family: "Chivo", sans-serif;
+  color: var(--text);
+}
+
+#menu-toggle,
+.menu-label {
+  display: none;
+}
+
+@media (max-width: 1140px) {
+  .info {
+    margin: 0px 20px;
+  }
+  .skater {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 990px) {
+  .skater {
+    display: none;
+  }
+
+  .info {
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+  }
+
+  .info p {
+    text-align: center;
+    width: 80%;
+
+    padding: 30px;
+  }
+
+  .botones {
+    margin-top: 4%;
+  }
+
+  #baranda-second-info {
+    margin-top: 10px;
+  }
+  #cards {
+    margin-top: 10px;
+  }
+
+  #contacto {
+    margin-top: 10px;
+  }
+  .cards-contenedor {
+    gap: 10px;
+    padding: 0px 5px;
+  }
+}
+
+@media (max-width: 910px) {
+  .contenedor-contacto {
+    justify-content: center;
+  }
+}
+
+/**652px menu hamburguesa**/
+@media (max-width: 652px) {
+  .navbar-list {
+    position: absolute;
+    top: 80px;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    flex-direction: column;
+    background-color: var(--cards);
+
+    border-top: 0px;
+    border-radius: 0px 0px 10px 10px;
+    align-items: flex-start;
+    padding: 45px 30px;
+    gap: 25px;
+    z-index: 2;
+    display: none;
+  }
+
+  .menu-label {
+    display: flex;
+    cursor: pointer;
+    order: 2;
+  }
+
+  #menu-toggle:checked + .navbar-list {
+    display: flex;
+  }
+}
+
+@media (max-width: 566px) {
+  .logo {
+    height: 40%;
+  }
+
+  .skater-2 {
+    width: 330px;
+  }
+}
+
+@media (max-width: 437px) {
+  .botones {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .title-cards {
+    width: 80%;
+    text-align: center;
+  }
+
+  .cards-contenedor {
+    gap: 20px;
+  }
+
+  .cards-info p {
+    font-size: 15px;
+    padding: 0px 5px;
+  }
+}
+
+@media (max-width: 390px) {
+  .icono-skate {
+    height: 22px;
+  }
+
+  .menu-icon {
+    height: 22px;
+  }
+
+  .navbar {
+    gap: 10px;
+  }
+
+  .info p {
+    display: none;
+  }
+
+  #baranda-second-info {
+    margin-top: 0px;
+  }
+  #cards {
+    margin-top: 0px;
+  }
+
+  #contacto {
+    margin-top: 0px;
+  }
+
+  .skater-2 {
+    width: 260px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  .cards-contenedor {
+    width: 90%;
+  }
+
+  .botones {
+    margin-top: 15%;
+  }
+
+  header {
+    padding: 0px 10px;
+    width: 100%;
+  }
 }
